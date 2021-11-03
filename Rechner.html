@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Zeitenrechner</title>
+</head>
+<body>
+    <Header>
+        <nav>
+            <ul>
+                <li><a href="/Rechner.html">Home</a></li>
+                <li><a href="Explanatiom.html">Explanation</a></li>
+            </ul>
+        </nav>
+    </Header>
+<H1>Zeitenrechner</H1>
+<p>macht das selbe wie das Excel Sheet but pretty. (not yet)</p>
+    <form>
+        <!-- Input der Ankuntszeit zum berechnen -->
+        <input type="text" name="arrivalHour" id="arrivalHour" placeholder="Stunde">
+        <input type="text" name="arrivalMinute" id="arrivalMinute" placeholder="Minute">
+        <!-- "Input" als feste Variable, weil ich es nicht anders hinbekommen habe -->
+        <input type="text" name="stayHour" id="stayHour" value="8" hidden>
+        <input type="text" name="stayMinute" id="stayMinute" value="27"hidden>
+        <br>
+        <!-- checkbox für Überstundenberechnung-->
+        <input type="checkbox" id="overtimeUse" name="overtimeUse">
+        <label for="overtimeUsage">Überstunden einbeziehen?</label>
+        <br>
+        <!-- Überstunden eingabe-->
+        <input type="text" name="overtimeHour" id="overtimeHour" placeholder="Stunde">
+        <input type="text" name="overtimeMinute" id="overtimeMinute" placeholder="Minute">
+        <br>
+        <!-- Checkbox für leave time-->
+        <input type="checkbox" id="leaveUse" name="leaveUse">
+        <label for="leaveUsage">Feierabend Zeit?</label>
+        <br>
+        <!-- Überstunden ausrechnen wenn man festlegt wann man geht-->
+        <input type="text" name="leaveHour" id="leaveHour" placeholder="Stunde">
+        <input type="text" name="leaveMinute" id="leaveMinute" placeholder="Minute">
+        <!-- Button fürs berechnen der Feierabend Zeit -->
+        <input type="button" onclick="calculate()" value="calc">
+    </form>
+    <p1> Go Time:
+        <span id="resultHour"></span>
+        :
+        <span id="resultMinute"></span>
+    </p1>
+    <script src="calculation.js"></script>
+</body>
+</html>
