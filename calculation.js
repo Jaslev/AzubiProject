@@ -17,30 +17,33 @@ function calculate() {
     if (arrivalMinute + stayMinute > 59) {
         stayHour = stayHour + 1;
         stayMinute = stayMinute - 60;
-
+    }
+    // needed if you don't put anything into the overtime fields.
+    if (isNaN(overtimeHour)) overtimeHour = 0;
+    if (isNaN(overtimeMinute)) overtimeMinute = 0;
+    
+    if (((stayMinute + arrivalMinute) - overtimeMinute)<0) {
+        overtimeHour = overtimeHour + 1;
+        overtimeMinute = overtimeMinute - 60;
+    }
+    if((leaveMinute - (stayMinute + arrivalMinute))<0) {
+        leaveHour = leaveHour - 1;
+        leaveMinute = leaveMinute + 60;
     }
     if (overtimeCheck.checked & leaveCheck.checked) {
         // calculates the new overtime considering all values
-        console.log(overtimeCheck.checked);
-        console.log(leaveCheck.checked);
+        document.getElementById("result").innerHTML = (leaveHour - (stayHour + arrivalHour) + overtimeHour) + ":" + (leaveMinute - (stayMinute + arrivalMinute) + overtimeMinute);
     }
     else if (overtimeCheck.checked) {
-        // calculates the time you can you go considering overtime
-        console.log(overtimeCheck.checked);
-        console.log(leaveCheck.checked);
+        // calculates the time you can you go considering overtimeframewo
+        document.getElementById("result").innerHTML = ((stayHour + arrivalHour) - overtimeHour) + ":" + ((stayMinute + arrivalMinute) - overtimeMinute);
     }
     else if (leaveCheck.checked) {
         // calculates the overtime based on arrival and leave time
-        if((leaveMinute-(stayMinute+arrivalMinute))<0) {
-            leaveHour = leaveHour - 1;
-            leaveMinute = leaveMinute + 60;
-        }
-        document.getElementById("resultHour").innerHTML = leaveHour - (stayHour+arrivalHour);
-        document.getElementById("resultMinute").innerHTML = leaveMinute - (stayMinute+arrivalMinute);
+        document.getElementById("result").innerHTML = (leaveHour - (stayHour + arrivalHour)) + ":" + (leaveMinute - (stayMinute + arrivalMinute));
     }
     else {
         // calculates the time you can go withoout any overtime usage (8:27h)
-        document.getElementById("resultHour").innerHTML = stayHour + arrivalHour;
-        document.getElementById("resultMinute").innerHTML = stayMinute + arrivalMinute;
+        document.getElementById("result").innerHTML = (stayHour + arrivalHour) + ":" + (stayMinute + arrivalMinute);
     }
 }
