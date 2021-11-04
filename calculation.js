@@ -47,3 +47,12 @@ function calculate() {
         document.getElementById("result").innerHTML = (stayHour + arrivalHour) + ":" + (stayMinute + arrivalMinute);
     }
 }
+
+function check() {
+    if (document.getElementById("overtimeUse").checked = true) {
+        document.getElementById("overtimeHour").readOnly = false;
+    }
+    else if (document.getElementById("overtimeUse").checked = false) {
+        document.getElementById("overtimeHour").readOnly = true;
+    }
+}

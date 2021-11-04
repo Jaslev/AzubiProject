@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Zeitenrechner</title>
-    <link rel="stylesheet" href="globalStyle.css">
+    <link rel="stylesheet" href="">
 </head>
 <body>
     <Header>
         <nav>
             <ul>
-                <li><a href="/Rechner.html">Home</a></li>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="/Rechner.html">Calculator</a></li>
                 <li><a href="Explanatiom.html">Explanation</a></li>
             </ul>
         </nav>
     </Header>
-<H1>Zeitenrechner</H1>
+<h1>Zeitenrechner</h1>
 <p>macht das selbe wie das Excel Sheet but pretty. (not yet) (nur für Bürozeiten)</p>
     <form>
         <!-- Input der Ankuntszeit zum berechnen -->
@@ -27,20 +28,20 @@
         <input type="text" name="stayMinute" id="stayMinute" value="27" hidden>
         <br>
         <!-- checkbox für Überstundenberechnung-->
-        <input type="checkbox" id="overtimeUse" name="overtimeUse">
+        <input type="checkbox" id="overtimeUse" name="overtimeUse" onclick="check()">
         <label for="overtimeUsage">Überstunden einbeziehen?</label>
         <br>
         <!-- Überstunden eingabe-->
-        <input type="text" name="overtimeHour" id="overtimeHour" placeholder="Stunde">
-        <input type="text" name="overtimeMinute" id="overtimeMinute" placeholder="Minute">
+        <input type="text" name="overtimeHour" id="overtimeHour" placeholder="Stunde" readonly>
+        <input type="text" name="overtimeMinute" id="overtimeMinute" placeholder="Minute" readonly>
         <br>
         <!-- Checkbox für leave time-->
         <input type="checkbox" id="leaveUse" name="leaveUse">
         <label for="leaveUsage">Feierabend Zeit?</label>
         <br>
         <!-- Überstunden ausrechnen wenn man festlegt wann man geht-->
-        <input type="text" name="leaveHour" id="leaveHour" placeholder="Stunde">
-        <input type="text" name="leaveMinute" id="leaveMinute" placeholder="Minute">
+        <input type="text" name="leaveHour" id="leaveHour" placeholder="Stunde" readonly>
+        <input type="text" name="leaveMinute" id="leaveMinute" placeholder="Minute" readonly>
         <!-- Button fürs berechnen der Feierabend Zeit -->
         <input type="button" onclick="calculate()" value="calc">
     </form>

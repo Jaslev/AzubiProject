@@ -10,18 +10,14 @@ body {
     object-fit:contain;
 }
 header {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
+    background-color: white;
     width: 100%;
-    background: rgba(170, 170, 255, 0,3);
     padding: 10px;
-    font-weight: bold;
 }
 nav a:visited, nav a:link {
-    color: black;
+    color: white;
     text-decoration: none;
+    font-size: 20px;
 }
 nav > ul {
     display: inline;
@@ -31,7 +27,26 @@ nav > ul > li {
     display: inline-block;
     list-style: none;
     margin: 0px 10px 0 10px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 2px 5px 2px 5px;
+    background-color: rgb(128, 89, 89);
+    
 }
-li {
-    padding: 8px 10px 8px 10px;
+h1
+{
+    padding-left: 100px;
+    padding-top: 20px;
+}
+form, p
+{
+    padding-left: 100px;
+}
+input
+{
+    border: none;
+    padding: 10px;
+}
+#arrivalHour, #arrivalMinute {
+    
 }
