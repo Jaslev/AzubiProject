@@ -47,12 +47,27 @@ function calculate() {
         document.getElementById("result").innerHTML = (stayHour + arrivalHour) + ":" + (stayMinute + arrivalMinute);
     }
 }
-
-function check() {
-    if (document.getElementById("overtimeUse").checked = true) {
-        document.getElementById("overtimeHour").readOnly = false;
+// disables the function to type into the overtime fields when checkbox isn't checked
+document.getElementById("overtimeUse").addEventListener("click", checkOvertime);
+function checkOvertime() {
+    if (overtimeUse.checked) {
+        overtimeHour.readOnly = false;
+        overtimeMinute.readOnly = false;
     }
-    else if (document.getElementById("overtimeUse").checked = false) {
-        document.getElementById("overtimeHour").readOnly = true;
+    else {
+        overtimeHour.readOnly = true;
+        overtimeMinute.readOnly = true;
+    }
+}
+// disables the function to type into the leave fields when checkbox isn't checked
+document.getElementById("leaveUse").addEventListener("click", checkLeave);
+function checkLeave() {
+    if (leaveUse.checked) {
+        leaveHour.readOnly = false;
+        leaveMinute.readOnly = false;
+    }
+    else {
+        leaveHour.readOnly = true;
+        leaveMinute.readOnly = true;
     }
 }
