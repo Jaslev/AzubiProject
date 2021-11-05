@@ -1,13 +1,37 @@
 * {
     margin: 0;
 }
+html {
+    background-image: url("Images/wallpaper.jpg");
+    background-size: cover;
+    resize: both;
+    overflow: scroll;
+}
 html, body {
     height:100%;
 }
+@font-face {
+    font-family: IkeaRegular;
+    src: url("Font/NotoIKEALatin-Regular.ttf");
+}
+@font-face {
+    font-family: IkeaItalic;
+    src: url("Font/NotoIKEALatin-Italic.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: IkeaBoldItalic;
+    src: url("Font/NotoIKEALatin-BoldItalic.ttf");
+    font-style: italic;
+    font-weight: bold;
+}
+@font-face {
+    font-family: IkeaBold;
+    src: url("Font/NotoIKEALatin-Bold.ttf");
+    font-weight: bold;
+}
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgb(211, 211, 241);
-    object-fit:contain;
+    font-family: IkeaRegular, IkeaItalic, IkeaBoldItalic, IkeaBold;
 }
 header {
     background-color: white;
@@ -46,7 +70,4 @@ input
 {
     border: none;
     padding: 10px;
-}
-#arrivalHour, #arrivalMinute {
-    
 }
