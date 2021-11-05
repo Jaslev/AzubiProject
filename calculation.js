@@ -51,23 +51,23 @@ function calculate() {
 document.getElementById("overtimeUse").addEventListener("click", checkOvertime);
 function checkOvertime() {
     if (overtimeUse.checked) {
-        overtimeHour.readOnly = false;
-        overtimeMinute.readOnly = false;
+        overtimeHour.disabled = false;
+        overtimeMinute.disabled = false;
     }
     else {
-        overtimeHour.readOnly = true;
-        overtimeMinute.readOnly = true;
+        overtimeHour.disabled = true;
+        overtimeMinute.disabled = true;
     }
 }
 // disables the function to type into the leave fields when checkbox isn't checked
 document.getElementById("leaveUse").addEventListener("click", checkLeave);
 function checkLeave() {
     if (leaveUse.checked) {
-        leaveHour.readOnly = false;
-        leaveMinute.readOnly = false;
+        leaveHour.disabled = false;
+        leaveMinute.disabled = false;
     }
     else {
-        leaveHour.readOnly = true;
-        leaveMinute.readOnly = true;
+        leaveHour.disabled = true;
+        leaveMinute.disabled = true;
     }
 }
