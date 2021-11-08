@@ -75,3 +75,21 @@ footer {
     background: rgba(255, 255, 255, 0.5);
     bottom: 0;
 }
+#stay {
+    display: none;
+}
+#mainCalculator {
+    margin: 1em;
+    background: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    border-color: white;
+}
+#arrivalHour, #arrivalMinute, #overtimeHour, #overtimeMinute, #leaveHour, #leaveMinute {
+    border: none;
+    font-size: large;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+#arrival, #overtime, #leave {
+    text-align: center;
+}
