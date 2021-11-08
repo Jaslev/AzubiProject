@@ -71,3 +71,18 @@ function checkLeave() {
         leaveMinute.disabled = true;
     }
 }
+
+let arrivalHourInput = document.getElementById("arrivalHour");
+let arrivalMinuteInput = document.getElementById("arrivalMinute");
+let checkButton = document.getElementById("button");
+
+arrivalHourInput.addEventListener("change", checkInput);
+
+function checkInput() {
+    if (arrivalHour === "" & arrivalMinute === "") {
+        checkButton.disabled = true;
+    }
+    else {
+        checkButton.disabled = false;
+    }
+}
