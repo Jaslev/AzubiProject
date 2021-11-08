@@ -17,37 +17,53 @@
             </ul>
         </nav>
     </Header>
+    <div id="mainCalculator">
 <h1>Zeitenrechner</h1>
 <p>macht das selbe wie das Excel Sheet but pretty. (not yet) (nur für Bürozeiten)</p>
     <form>
-        <!-- Input der Ankuntszeit zum berechnen -->
-        <input type="text" name="arrivalHour" id="arrivalHour" placeholder="Stunde">
-        <input type="text" name="arrivalMinute" id="arrivalMinute" placeholder="Minute">
-        <!-- "Input" als feste Variable, weil ich es nicht anders hinbekommen habe -->
-        <input type="text" name="stayHour" id="stayHour" value="8" hidden>
-        <input type="text" name="stayMinute" id="stayMinute" value="27" hidden>
-        <br>
-        <!-- checkbox für Überstundenberechnung-->
-        <input type="checkbox" id="overtimeUse" name="overtimeUse">
-        <label for="overtimeUsage">Überstunden einbeziehen?</label>
-        <br>
-        <!-- Überstunden eingabe-->
-        <input type="text" name="overtimeHour" id="overtimeHour" placeholder="Stunde" disabled>
-        <input type="text" name="overtimeMinute" id="overtimeMinute" placeholder="Minute" disabled>
-        <br>
-        <!-- Checkbox für leave time-->
-        <input type="checkbox" id="leaveUse" name="leaveUse">
-        <label for="leaveUsage">Feierabend Zeit?</label>
-        <br>
-        <!-- Überstunden ausrechnen wenn man festlegt wann man geht-->
-        <input type="text" name="leaveHour" id="leaveHour" placeholder="Stunde" disabled>
-        <input type="text" name="leaveMinute" id="leaveMinute" placeholder="Minute" disabled>
-        <!-- Button fürs berechnen der Feierabend Zeit -->
-        <input type="button" onclick="calculate()" value="calc">
+        <div id="arrival">
+            <!-- Input der Ankuntszeit zum berechnen -->
+            <input type="text" name="arrivalHour" id="arrivalHour" placeholder="Stunde">
+            <input type="text" name="arrivalMinute" id="arrivalMinute" placeholder="Minute">
+        </div>
+        <div id="stay">
+            <!-- "Input" als feste Variable, weil ich es nicht anders hinbekommen habe -->
+            <input type="text" name="stayHour" id="stayHour" value="8" hidden>
+            <input type="text" name="stayMinute" id="stayMinute" value="27" hidden>
+            <br>
+        </div>
+        <div id="checkOvertime">
+            <!-- checkbox für Überstundenberechnung-->
+            <input type="checkbox" id="overtimeUse" name="overtimeUse">
+            <label for="overtimeUsage">Überstunden einbeziehen?</label>
+            <br>
+        </div>
+        <div id="overtime">
+            <!-- Überstunden eingabe-->
+            <input type="text" name="overtimeHour" id="overtimeHour" placeholder="Stunde" disabled>
+            <input type="text" name="overtimeMinute" id="overtimeMinute" placeholder="Minute" disabled>
+            <br>
+        </div>
+        <div id="checkLeave">
+            <!-- Checkbox für leave time-->
+            <input type="checkbox" id="leaveUse" name="leaveUse">
+            <label for="leaveUsage">Feierabend Zeit?</label>
+            <br>
+        </div>
+        <div id="leave">
+            <!-- Überstunden ausrechnen wenn man festlegt wann man geht-->
+            <input type="text" name="leaveHour" id="leaveHour" placeholder="Stunde" disabled>
+            <input type="text" name="leaveMinute" id="leaveMinute" placeholder="Minute" disabled>
+        </div>
+        <div id="calcButton">
+            <!-- Button fürs berechnen der Feierabend Zeit -->
+            <input type="button" onclick="calculate()" value="calc">
+        </div>
     </form>
     <p1>
         <span id="result"></span>
     </p1>
+</div>
     <script src="calculation.js"></script>
 </body>
 </html>
