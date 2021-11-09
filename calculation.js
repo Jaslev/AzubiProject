@@ -32,19 +32,19 @@ function calculate() {
     }
     if (overtimeCheck.checked & leaveCheck.checked) {
         // calculates the new overtime considering all values
-        document.getElementById("result").innerHTML = (leaveHour - (stayHour + arrivalHour) + overtimeHour) + ":" + (leaveMinute - (stayMinute + arrivalMinute) + overtimeMinute);
+        document.getElementById("output").value = (leaveHour - (stayHour + arrivalHour) + overtimeHour) + ":" + (leaveMinute - (stayMinute + arrivalMinute) + overtimeMinute);
     }
     else if (overtimeCheck.checked) {
         // calculates the time you can you go considering overtimeframewo
-        document.getElementById("result").innerHTML = ((stayHour + arrivalHour) - overtimeHour) + ":" + ((stayMinute + arrivalMinute) - overtimeMinute);
+        document.getElementById("output").value = ((stayHour + arrivalHour) - overtimeHour) + ":" + ((stayMinute + arrivalMinute) - overtimeMinute);
     }
     else if (leaveCheck.checked) {
         // calculates the overtime based on arrival and leave time
-        document.getElementById("result").innerHTML = (leaveHour - (stayHour + arrivalHour)) + ":" + (leaveMinute - (stayMinute + arrivalMinute));
+        document.getElementById("output").value = (leaveHour - (stayHour + arrivalHour)) + ":" + (leaveMinute - (stayMinute + arrivalMinute));
     }
     else {
         // calculates the time you can go withoout any overtime usage (8:27h)
-        document.getElementById("result").innerHTML = (stayHour + arrivalHour) + ":" + (stayMinute + arrivalMinute);
+        document.getElementById("output").value = (stayHour + arrivalHour) + ":" + (stayMinute + arrivalMinute);
     }
 }
 // disables the function to type into the overtime fields when checkbox isn't checked
@@ -71,7 +71,6 @@ function checkLeave() {
         leaveMinute.disabled = true;
     }
 }
-
 let arrivalHourInput = document.getElementById("arrivalHour");
 let arrivalMinuteInput = document.getElementById("arrivalMinute");
 let checkButton = document.getElementById("button");
