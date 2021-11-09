@@ -75,13 +75,21 @@ let arrivalHourInput = document.getElementById("arrivalHour");
 let arrivalMinuteInput = document.getElementById("arrivalMinute");
 let checkButton = document.getElementById("button");
 
-arrivalHourInput.addEventListener("change", checkInput);
+arrivalHourInput.addEventListener("input", checkInput);
+arrivalMinuteInput.addEventListener("input", checkInput);
+checkButton.disabled = true;
 
 function checkInput() {
-    if (arrivalHour === "" & arrivalMinute === "") {
-        checkButton.disabled = true;
-    }
-    else {
+    if (arrivalHourInput.value.length != 0 & arrivalMinuteInput.value.length != 0) {
         checkButton.disabled = false;
     }
+    else {
+        checkButton.disabled = true;
+    }
+}
+
+function copy() {
+    let outputField = document.getElementById("output");
+    outputField.select();
+    navigator.clipboard.writeText(outputField.value);
 }
