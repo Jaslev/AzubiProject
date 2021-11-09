@@ -57,12 +57,14 @@
         </div>
         <div id="calcButton">
             <!-- Button fürs berechnen der Feierabend Zeit -->
-            <input type="button" onclick="calculate()" value="calc">
+            <input type="button" onclick="calculate()" id="button" value="calc" disabled>
         </div>
-    </form>
-    <p1>
-        <span id="result"></span>
-    </p1>
+    </form> 
+</div>
+<div id="results">
+    <form>
+    <input type="text" id="output" name="output" readonly>
+</form>
 </div>
     <script src="calculation.js"></script>
 </body>
