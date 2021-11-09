@@ -93,3 +93,38 @@ footer {
 #arrival, #overtime, #leave {
     text-align: center;
 }
+#checkOvertime, #checkLeave, #calcButton {
+    text-align:center;
+}
+p {
+    text-align: center;
+}
+#calcButton {
+    margin: 0.5em;
+}
+#button {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: white;
+    border-radius: 0.5em;
+    border-color: rgba(255, 255, 255, 0.87);
+    box-shadow: 2em;
+}
+#results {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    border-color: white;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+#output {
+    font-size: 120px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
