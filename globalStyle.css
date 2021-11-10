@@ -110,7 +110,7 @@ p {
     padding-right: 2em;
     padding-top: 1em;
     padding-bottom: 1em;
-    background-color: rgb(219, 216, 216);
+    background-color: rgb(243, 243, 243);
     border-radius: 0.5em;
     border-color: rgba(255, 255, 255, 0.87);
     box-shadow: 2em;
@@ -134,4 +134,7 @@ p {
 }
 input[type=text]:focus {
     outline:none;
+}
+#button:disabled {
+    background-color: rgb(219, 216, 216);
 }
