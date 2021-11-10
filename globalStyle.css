@@ -50,10 +50,13 @@ nav > ul > li {
     display: inline-block;
     list-style: none;
     margin: 0px 10px 0 10px;
-    border-style: solid;
-    border-width: 1px;
-    padding: 2px 5px 2px 5px;
-    background-color: rgb(128, 89, 89);
+    border-style:outset;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 2px 7px 5px 7px;
+    background-color: rgba(120, 207, 218, 0.5);
+    border-color: rgb(122, 122, 122);
+    text-shadow: black 1px 2px;
     
 }
 #mainHome {
@@ -107,7 +110,7 @@ p {
     padding-right: 2em;
     padding-top: 1em;
     padding-bottom: 1em;
-    background-color: white;
+    background-color: rgb(219, 216, 216);
     border-radius: 0.5em;
     border-color: rgba(255, 255, 255, 0.87);
     box-shadow: 2em;
@@ -123,8 +126,12 @@ p {
 #output {
     font-size: 120px;
     font-weight: bold;
-    text-align: center;
     border: none;
     background: none;
     cursor: pointer;
+    width: 5ch;
+    text-align: center;
+}
+input[type=text]:focus {
+    outline:none;
 }
